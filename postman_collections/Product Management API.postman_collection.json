@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "77538541-e61c-4826-bbba-cd17d2f9d6a1",
+		"name": "Product Management API",
+		"description": "API for managing products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1372935"
+	},
+	"item": [
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"code\": \"P001\",\n  \"name\": \"Sample Product\",\n  \"description\": \"This is a sample product.\",\n  \"image\": \"image_url_1\",\n  \"category\": \"Category 1\",\n  \"price\": 100.0,\n  \"quantity\": 10,\n  \"internalReference\": \"REF001\",\n  \"shellId\": 123,\n  \"inventoryStatus\": \"INSTOCK\",\n  \"rating\": 5\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"code\": \"P002\",\n  \"name\": \"Sample Product 2\",\n  \"description\": \"This is a sample product 2\",\n  \"image\": \"image_url_2\",\n  \"category\": \"Category 2\",\n  \"price\": 100.0,\n  \"quantity\": 10,\n  \"internalReference\": \"REF002\",\n  \"shellId\": 123,\n  \"inventoryStatus\": \"INSTOCK\",\n  \"rating\": 5\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
